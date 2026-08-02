@@ -16,21 +16,21 @@ export default function HeroVisual() {
     >
       <defs>
         <linearGradient id="heroWash" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#EAF2FC" />
-          <stop offset="45%" stopColor="#EDEAFB" />
-          <stop offset="100%" stopColor="#E7F7F2" />
+          <stop offset="0%" stopColor="#191536" />
+          <stop offset="45%" stopColor="#1e1a42" />
+          <stop offset="100%" stopColor="#171340" />
         </linearGradient>
         <radialGradient id="blobTeal" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#0F766E" stopOpacity="0.35" />
-          <stop offset="100%" stopColor="#0F766E" stopOpacity="0" />
+          <stop offset="0%" stopColor="#4C6FFF" stopOpacity="0.35" />
+          <stop offset="100%" stopColor="#4C6FFF" stopOpacity="0" />
         </radialGradient>
         <radialGradient id="blobPurple" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#7C6BC4" stopOpacity="0.3" />
-          <stop offset="100%" stopColor="#7C6BC4" stopOpacity="0" />
+          <stop offset="0%" stopColor="#9B5DE5" stopOpacity="0.32" />
+          <stop offset="100%" stopColor="#9B5DE5" stopOpacity="0" />
         </radialGradient>
         <radialGradient id="blobOrange" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#C9863F" stopOpacity="0.25" />
-          <stop offset="100%" stopColor="#C9863F" stopOpacity="0" />
+          <stop offset="0%" stopColor="#D99A4E" stopOpacity="0.22" />
+          <stop offset="100%" stopColor="#D99A4E" stopOpacity="0" />
         </radialGradient>
       </defs>
 
@@ -39,7 +39,7 @@ export default function HeroVisual() {
       <circle cx="470" cy="150" r="200" fill="url(#blobPurple)" />
       <circle cx="330" cy="420" r="220" fill="url(#blobOrange)" />
 
-      <g stroke="#9DBBD6" strokeWidth="1.2" opacity="0.6">
+      <g stroke="#4B4189" strokeWidth="1.2" opacity="0.6">
         <line x1="140" y1="150" x2="300" y2="110" />
         <line x1="140" y1="150" x2="300" y2="260" />
         <line x1="140" y1="150" x2="150" y2="320" />
@@ -51,7 +51,7 @@ export default function HeroVisual() {
         <line x1="290" y1="410" x2="460" y2="340" />
         <line x1="460" y1="190" x2="460" y2="340" />
       </g>
-      <g fill="#FFFFFF" stroke="#0F766E" strokeWidth="2.2">
+      <g fill="#1c1839" stroke="#6D5CE8" strokeWidth="2.2">
         <circle cx="140" cy="150" r="11" />
         <circle cx="150" cy="320" r="11" />
         <circle cx="300" cy="110" r="10" />
@@ -60,8 +60,8 @@ export default function HeroVisual() {
         <circle cx="460" cy="190" r="12" />
         <circle cx="460" cy="340" r="12" />
       </g>
-      <circle cx="460" cy="265" r="34" fill="none" stroke="#0F766E" opacity="0.25" />
-      <circle cx="460" cy="265" r="52" fill="none" stroke="#0F766E" opacity="0.14" />
+      <circle cx="460" cy="265" r="34" fill="none" stroke="#6D5CE8" opacity="0.25" />
+      <circle cx="460" cy="265" r="52" fill="none" stroke="#6D5CE8" opacity="0.14" />
     </svg>
   );
 }

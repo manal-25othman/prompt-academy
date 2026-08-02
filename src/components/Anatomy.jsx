@@ -7,7 +7,7 @@ const PARTS = [
 
 export default function Anatomy() {
   return (
-    <section id="anatomy" data-screen-label="03 مكوّنات البرومت" style={{ padding: '48px 0', borderTop: '1px solid #CFDFEE' }}>
+    <section id="anatomy" data-screen-label="03 مكوّنات البرومت" style={{ padding: '48px 0', borderTop: '1px solid var(--border-soft)' }}>
       <div className="eyebrow">03 — ANATOMY</div>
       <h2 className="h2" style={{ marginBottom: 26 }}>
         مكوّنات البرومت الأربعة
@@ -21,15 +21,15 @@ export default function Anatomy() {
                 {p.en}
               </span>
             </div>
-            <p className="muted" style={{ fontSize: 15, lineHeight: 1.9, color: '#5B7386', margin: '0 0 14px' }}>{p.desc}</p>
+            <p className="muted" style={{ fontSize: 15, lineHeight: 1.9, color: 'var(--muted)', margin: '0 0 14px' }}>{p.desc}</p>
             <div
               className="code"
               style={{
                 fontSize: 13,
                 lineHeight: 1.9,
-                color: '#205F56',
-                background: '#F2F7FC',
-                border: '1px solid #CBDCEC',
+                color: 'var(--link)',
+                background: 'var(--bg-panel-alt)',
+                border: '1px solid var(--border)',
                 borderRadius: 6,
                 padding: '12px 14px',
               }}

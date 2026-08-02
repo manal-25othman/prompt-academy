@@ -15,14 +15,14 @@ export default function FloatingWhatsApp() {
         display: 'flex',
         alignItems: 'center',
         gap: 10,
-        background: '#0F766E',
+        background: '#22C35E',
         color: '#FFFFFF',
         fontWeight: 600,
         fontSize: 14.5,
         padding: '14px 22px',
         borderRadius: 999,
         textDecoration: 'none',
-        boxShadow: '0 12px 30px rgba(23,56,92,0.16)',
+        boxShadow: '0 12px 30px rgba(0,0,0,0.35)',
       }}
     >
       راسلني على واتساب

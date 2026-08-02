@@ -29,7 +29,7 @@ function App() {
       className="app-shell"
       dir="rtl"
       lang="ar"
-      style={{ display: 'grid', gridTemplateColumns: '268px 1fr', alignItems: 'start', background: '#E8F1FB' }}
+      style={{ display: 'grid', gridTemplateColumns: '268px 1fr', alignItems: 'start', background: 'var(--bg)' }}
     >
       <Sidebar active={active} copiedKey={copiedKey} copy={copy} />
 

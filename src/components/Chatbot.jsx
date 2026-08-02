@@ -65,12 +65,12 @@ export default function Chatbot() {
           height: 56,
           borderRadius: '50%',
           border: 'none',
-          background: 'var(--accent, #0f766e)',
+          background: 'var(--accent-gradient, #6d5ce8)',
           color: '#fff',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          boxShadow: '0 12px 30px rgba(23,56,92,0.22)',
+          boxShadow: '0 12px 30px rgba(0,0,0,0.4)',
           cursor: 'pointer',
         }}
       >
@@ -101,14 +101,14 @@ export default function Chatbot() {
             maxHeight: 'calc(100vh - 140px)',
             display: 'flex',
             flexDirection: 'column',
-            boxShadow: '0 20px 50px rgba(23,56,92,0.22)',
+            boxShadow: '0 20px 50px rgba(0,0,0,0.45)',
             overflow: 'hidden',
           }}
         >
           <div
             style={{
               padding: '14px 16px',
-              background: 'var(--accent, #0f766e)',
+              background: 'var(--accent-gradient, #6d5ce8)',
               color: '#fff',
               fontWeight: 600,
               fontSize: 15,
@@ -124,7 +124,7 @@ export default function Chatbot() {
             ))}
             {loading && <Bubble role="assistant" text="…يكتب" muted />}
             {error && (
-              <div style={{ fontSize: 12.5, color: '#B42318', background: '#FEF3F2', border: '1px solid #FDA29B', borderRadius: 6, padding: '8px 10px' }}>
+              <div style={{ fontSize: 12.5, color: '#FCA5A5', background: 'rgba(185,28,28,0.18)', border: '1px solid #7F1D1D', borderRadius: 6, padding: '8px 10px' }}>
                 {error}
               </div>
             )}
@@ -144,7 +144,8 @@ export default function Chatbot() {
                 padding: '9px 12px',
                 fontSize: 14,
                 fontFamily: 'inherit',
-                background: '#fff',
+                background: 'var(--bg-panel-alt, #221d47)',
+                color: 'var(--text, #ede9fb)',
               }}
             />
             <button
@@ -170,13 +171,13 @@ function Bubble({ role, text, muted }) {
       style={{
         alignSelf: isUser ? 'flex-start' : 'flex-end',
         maxWidth: '85%',
-        background: isUser ? '#F6FAFE' : 'var(--sidebar-bg, #dce9f7)',
-        border: '1px solid var(--border, #c6d9ec)',
+        background: isUser ? 'var(--bg-panel-alt, #221d47)' : 'var(--sidebar-bg, #191536)',
+        border: '1px solid var(--border, #332c5e)',
         borderRadius: 10,
         padding: '9px 12px',
         fontSize: 14,
         lineHeight: 1.7,
-        color: muted ? '#8FA5A0' : '#12212F',
+        color: muted ? 'var(--muted, #a79fd1)' : 'var(--text-strong, #f7f5ff)',
         whiteSpace: 'pre-wrap',
       }}
     >

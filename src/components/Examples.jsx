@@ -8,7 +8,7 @@ export default function Examples({ copiedKey, copy }) {
   const label = copiedKey === 'ex' ? 'تم النسخ ✓' : 'انسخ';
 
   return (
-    <section id="examples" data-screen-label="06 قبل وبعد" style={{ padding: '48px 0', borderTop: '1px solid #CFDFEE' }}>
+    <section id="examples" data-screen-label="06 قبل وبعد" style={{ padding: '48px 0', borderTop: '1px solid var(--border-soft)' }}>
       <div className="eyebrow">06 — BEFORE / AFTER</div>
       <h2 className="h2" style={{ marginBottom: 22 }}>
         أمثلة قبل وبعد
@@ -26,39 +26,39 @@ export default function Examples({ copiedKey, copy }) {
         ))}
       </div>
       <div className="col2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-        <div className="panel" style={{ border: '1px solid #E7C9C4', background: '#FFF7F5', overflow: 'hidden' }}>
+        <div className="panel" style={{ border: '1px solid #5C3A3A', background: '#2A1A1C', overflow: 'hidden' }}>
           <div
             style={{
-              borderBottom: '1px solid #EED6D1',
+              borderBottom: '1px solid #4A2E2E',
               padding: '10px 14px',
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: 11,
-              color: '#B04638',
+              color: '#E8897A',
               letterSpacing: '0.1em',
             }}
           >
             before.txt
           </div>
-          <div className="code" style={{ padding: '20px 18px', fontSize: 14, lineHeight: 2, color: '#6B4A44', whiteSpace: 'pre-wrap' }}>
+          <div className="code" style={{ padding: '20px 18px', fontSize: 14, lineHeight: 2, color: '#D9B3AC', whiteSpace: 'pre-wrap' }}>
             {active.before}
           </div>
-          <div className="muted" style={{ borderTop: '1px solid #EED6D1', padding: '14px 18px', fontSize: 14, lineHeight: 1.85, color: '#8A6660' }}>
+          <div className="muted" style={{ borderTop: '1px solid #4A2E2E', padding: '14px 18px', fontSize: 14, lineHeight: 1.85, color: '#C29891' }}>
             {active.problem}
           </div>
         </div>
-        <div className="panel" style={{ border: '1px solid #A6D7CF', background: '#F3FBFA', overflow: 'hidden' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, borderBottom: '1px solid #C7E7E2', padding: '8px 14px' }}>
-            <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: '#0D9488', letterSpacing: '0.1em' }}>
+        <div className="panel" style={{ border: '1px solid #4B3F8A', background: '#1E1A42', overflow: 'hidden' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, borderBottom: '1px solid var(--border)', padding: '8px 14px' }}>
+            <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: 'var(--link)', letterSpacing: '0.1em' }}>
               after.txt
             </span>
             <button type="button" className={`mini-btn${copiedKey === 'ex' ? ' done' : ''}`} onClick={() => copy(active.after, 'ex')}>
               {label}
             </button>
           </div>
-          <div className="code" style={{ padding: '20px 18px', fontSize: 14, lineHeight: 2, color: '#143C36', whiteSpace: 'pre-wrap' }}>
+          <div className="code" style={{ padding: '20px 18px', fontSize: 14, lineHeight: 2, color: '#E4DFFB', whiteSpace: 'pre-wrap' }}>
             {active.after}
           </div>
-          <div className="muted" style={{ borderTop: '1px solid #C7E7E2', padding: '14px 18px', fontSize: 14, lineHeight: 1.85, color: '#4C7A72' }}>
+          <div className="muted" style={{ borderTop: '1px solid var(--border)', padding: '14px 18px', fontSize: 14, lineHeight: 1.85, color: 'var(--muted)' }}>
             {active.fix}
           </div>
         </div>

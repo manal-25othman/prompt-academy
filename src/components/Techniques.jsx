@@ -9,7 +9,7 @@ const TECHNIQUES = [
 
 export default function Techniques() {
   return (
-    <section id="techniques" data-screen-label="05 التقنيات" style={{ padding: '48px 0', borderTop: '1px solid #CFDFEE' }}>
+    <section id="techniques" data-screen-label="05 التقنيات" style={{ padding: '48px 0', borderTop: '1px solid var(--border-soft)' }}>
       <div className="eyebrow">05 — TECHNIQUES</div>
       <h2 className="h2" style={{ marginBottom: 26 }}>
         تقنيات ترفع جودة النتيجة فورًا
@@ -19,12 +19,12 @@ export default function Techniques() {
           <div key={t.sub} className="card col2" style={{ padding: '20px 22px', display: 'grid', gridTemplateColumns: '0.34fr 1fr', gap: 22 }}>
             <div>
               <div style={{ fontSize: 17, fontWeight: 600 }}>{t.title}</div>
-              <div className="muted" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10.5, color: '#7C93A8', letterSpacing: '0.12em', marginTop: 5 }}>
+              <div className="muted" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10.5, color: 'var(--muted)', letterSpacing: '0.12em', marginTop: 5 }}>
                 {t.sub}
               </div>
             </div>
             <div>
-              <p className="muted" style={{ fontSize: 15.5, lineHeight: 1.9, color: '#52697D', margin: '0 0 8px' }}>{t.desc}</p>
+              <p className="muted" style={{ fontSize: 15.5, lineHeight: 1.9, color: 'var(--muted)', margin: '0 0 8px' }}>{t.desc}</p>
               <p
                 className="accent"
                 style={{

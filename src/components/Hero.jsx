@@ -1,10 +1,10 @@
 import HeroVisual from './HeroVisual';
 
 const BARS = [
-  { label: 'افهم', bg: '#0F766E' },
-  { label: 'اكتب', bg: '#2F6FA8' },
-  { label: 'حسّن', bg: '#7C6BC4' },
-  { label: 'طبّق', bg: '#C9863F' },
+  { label: 'افهم', bg: '#4C6FFF' },
+  { label: 'اكتب', bg: '#6D5CE8' },
+  { label: 'حسّن', bg: '#9B5DE5' },
+  { label: 'طبّق', bg: '#D99A4E' },
 ];
 
 export default function Hero() {
@@ -13,10 +13,10 @@ export default function Hero() {
       style={{
         position: 'relative',
         margin: '32px 0 0',
-        border: '1px solid #C6D9EC',
+        border: '1px solid var(--border)',
         borderRadius: 16,
         overflow: 'hidden',
-        background: 'linear-gradient(120deg, #EDF3FC 0%, #F4F0FB 55%, #E9F7F4 100%)',
+        background: 'linear-gradient(120deg, #1a1640 0%, #211a4a 55%, #17133a 100%)',
       }}
     >
       <div className="hero-grid" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.08fr) minmax(0, 0.92fr)' }}>
@@ -28,7 +28,7 @@ export default function Hero() {
               gap: 9,
               fontSize: 15,
               fontWeight: 600,
-              color: '#0F766E',
+              color: 'var(--link)',
               marginBottom: 16,
             }}
           >
@@ -37,14 +37,14 @@ export default function Hero() {
                 width: 8,
                 height: 8,
                 borderRadius: '50%',
-                background: '#0F766E',
+                background: 'var(--accent-gradient)',
                 animation: 'pulseDot 2.4s ease-in-out infinite',
               }}
             />
             تعلّم الذكاء الاصطناعي مع منال
           </div>
           <h1 className="h1">من الصفر إلى احتراف كتابة البرومبتات</h1>
-          <p className="muted" style={{ fontSize: 17.5, lineHeight: 1.85, color: '#43607A', margin: '0 0 28px', textWrap: 'pretty' }}>
+          <p className="muted" style={{ fontSize: 17.5, lineHeight: 1.85, color: 'var(--muted)', margin: '0 0 28px', textWrap: 'pretty' }}>
             تعلّم الذكاء الاصطناعي التوليدي بطريقة عملية ومنظمة. ابدأ بفهم أساسياته، ثم أتقن كتابة البرومبتات
             الاحترافية، واستكشف التقنيات المتقدمة مع مكتبة من القوالب الجاهزة.
           </p>
@@ -57,7 +57,7 @@ export default function Hero() {
               gap: 12,
               borderRadius: 999,
               padding: '13px 16px',
-              boxShadow: '0 14px 34px rgba(23,56,92,0.12)',
+              boxShadow: '0 14px 34px rgba(0,0,0,0.3)',
               marginBottom: 20,
             }}
           >
@@ -66,8 +66,8 @@ export default function Hero() {
                 width: 36,
                 height: 36,
                 borderRadius: '50%',
-                background: '#EAF7F5',
-                color: '#0F766E',
+                background: 'var(--bg-panel-alt)',
+                color: 'var(--link)',
                 display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -77,13 +77,13 @@ export default function Hero() {
             >
               ✦
             </span>
-            <span style={{ flex: 1, fontSize: 15, color: '#7C93A8' }}>اكتب مهمتك… ودع البرومت يتكوّن أمامك</span>
+            <span style={{ flex: 1, fontSize: 15, color: 'var(--muted)' }}>اكتب مهمتك… ودع البرومت يتكوّن أمامك</span>
             <span
               style={{
                 width: 36,
                 height: 36,
                 borderRadius: '50%',
-                background: '#0F766E',
+                background: 'var(--accent-gradient)',
                 color: '#FFFFFF',
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -104,11 +104,11 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <div className="hero-img" style={{ position: 'relative', minWidth: 0, minHeight: 340, borderInlineStart: '1px solid #DCE9F7' }}>
+        <div className="hero-img" style={{ position: 'relative', minWidth: 0, minHeight: 340, borderInlineStart: '1px solid var(--border)' }}>
           <HeroVisual />
         </div>
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 1, background: '#CBDCEC', borderTop: '1px solid #CBDCEC' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 1, background: 'var(--border)', borderTop: '1px solid var(--border)' }}>
         {BARS.map((b) => (
           <span
             key={b.label}

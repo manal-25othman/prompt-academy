@@ -1,16 +1,22 @@
 :root {
-  --bg: #e8f1fb;
-  --text: #12212f;
-  --link: #0d9488;
-  --link-hover: #0b5f58;
-  --border: #c6d9ec;
-  --border-soft: #cfdfee;
-  --border-strong: #b3c9de;
-  --sidebar-bg: #dce9f7;
-  --accent: #0f766e;
-  --accent-2: #0d9488;
-  --accent-dark: #0b5f58;
-  --grid-line: #cbdcec;
+  --bg: #14112b;
+  --bg-panel: #1c1839;
+  --bg-panel-alt: #221d47;
+  --text: #ede9fb;
+  --text-strong: #f7f5ff;
+  --link: #a78bfa;
+  --link-hover: #c4b5fd;
+  --border: #332c5e;
+  --border-soft: #2a2550;
+  --border-strong: #4b4189;
+  --sidebar-bg: #191536;
+  --accent: #6d5ce8;
+  --accent-2: #9b5de5;
+  --accent-dark: #4c3fb0;
+  --accent-blue: #4c6fff;
+  --accent-gradient: linear-gradient(135deg, #4c6fff, #9b5de5);
+  --grid-line: #2a2550;
+  --muted: #a79fd1;
 }
 
 * {
@@ -43,8 +49,8 @@ button {
 }
 
 ::selection {
-  background: #bfe7e0;
-  color: #0b2b27;
+  background: #4c3fb0;
+  color: #f7f5ff;
 }
 
 ::-webkit-scrollbar {
@@ -57,12 +63,12 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #b7cde3;
+  background: #453d7a;
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #9dbbd6;
+  background: #5b4fa3;
 }
 
 @keyframes pulseDot {
@@ -96,7 +102,7 @@ input:focus-visible,
   font-weight: 700;
   margin: 0 0 18px;
   letter-spacing: -0.02em;
-  color: #12212f;
+  color: var(--text-strong);
 }
 
 .h2 {
@@ -104,10 +110,11 @@ input:focus-visible,
   line-height: 1.35;
   font-weight: 700;
   margin: 0;
+  color: var(--text-strong);
 }
 
 .muted {
-  color: #647c90;
+  color: var(--muted);
 }
 
 .accent {
@@ -125,7 +132,7 @@ input:focus-visible,
 .panel,
 .card {
   border: 1px solid var(--border);
-  background: #fff;
+  background: var(--bg-panel);
   border-radius: 8px;
 }
 
@@ -144,22 +151,22 @@ input:focus-visible,
   padding: 10px 12px;
   border-radius: 6px;
   text-decoration: none;
-  color: #3e5a72;
+  color: var(--muted);
   font-size: 14px;
 }
 .nav-link:hover {
-  background: #e4eef9;
-  color: #12212f;
+  background: var(--bg-panel-alt);
+  color: var(--text-strong);
 }
 .nav-link.active {
-  background: #dbeaf8;
-  color: #0b5f58;
+  background: var(--bg-panel-alt);
+  color: var(--link-hover);
   box-shadow: inset 2px 0 0 var(--accent);
 }
 .nav-link .num {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
-  color: #7c93a8;
+  color: #7c72ad;
 }
 
 .topnav-link {
@@ -169,12 +176,12 @@ input:focus-visible,
   padding: 8px 14px;
   border-radius: 999px;
   border: 1px solid var(--border-strong);
-  color: #22394d;
+  color: var(--text);
 }
 .topnav-link.active {
-  background: #eaf7f5;
+  background: var(--bg-panel-alt);
   border-color: var(--accent);
-  color: var(--accent-dark);
+  color: var(--link-hover);
 }
 .topnav-cta {
   text-decoration: none;
@@ -182,27 +189,27 @@ input:focus-visible,
   font-size: 13.5px;
   padding: 8px 14px;
   border-radius: 999px;
-  background: var(--accent);
+  background: var(--accent-gradient);
   color: #fff;
 }
 
 .wa-btn {
   text-decoration: none;
   text-align: center;
-  background: #e4f5f2;
-  color: var(--accent-dark);
-  border: 1px solid #8fd0c7;
+  background: var(--bg-panel-alt);
+  color: var(--link-hover);
+  border: 1px solid var(--border-strong);
   padding: 11px 14px;
   border-radius: 6px;
   font-size: 13.5px;
 }
 .wa-btn:hover {
-  background: #d3ede8;
+  background: #2a2455;
 }
 
 .wa-btn-solid {
   text-decoration: none;
-  background: var(--accent);
+  background: var(--accent-gradient);
   color: #fff;
   font-weight: 600;
   padding: 14px 18px;
@@ -211,21 +218,21 @@ input:focus-visible,
   text-align: center;
 }
 .wa-btn-solid:hover {
-  background: var(--accent-2);
+  filter: brightness(1.12);
 }
 
 .wa-btn-soft {
   text-decoration: none;
-  border: 1px solid #8fd0c7;
-  color: var(--accent-dark);
-  background: #eaf7f5;
+  border: 1px solid var(--border-strong);
+  color: var(--link-hover);
+  background: var(--bg-panel-alt);
   padding: 14px 18px;
   border-radius: 6px;
   font-size: 15px;
   text-align: center;
 }
 .wa-btn-soft:hover {
-  background: #d3ede8;
+  background: #2a2455;
 }
 
 .mini-btn {
@@ -236,12 +243,12 @@ input:focus-visible,
   cursor: pointer;
   border: 1px solid var(--border-strong);
   background: transparent;
-  color: #3e5a72;
+  color: var(--text);
 }
 .mini-btn.done {
   border-color: var(--accent);
-  background: #d9f2ee;
-  color: var(--accent-dark);
+  background: var(--bg-panel-alt);
+  color: var(--link-hover);
 }
 
 .chip-btn {
@@ -254,12 +261,12 @@ input:focus-visible,
   line-height: 1.6;
   border: 1px solid var(--border-strong);
   background: transparent;
-  color: #3e5a72;
+  color: var(--text);
 }
 .chip-btn.active {
   border-color: var(--accent);
-  background: #d9f2ee;
-  color: var(--accent-dark);
+  background: var(--bg-panel-alt);
+  color: var(--link-hover);
 }
 
 .round-btn {
@@ -268,19 +275,19 @@ input:focus-visible,
   border-radius: 8px;
   cursor: pointer;
   border: 1px solid var(--border-strong);
-  background: #fff;
-  color: #22394d;
+  background: var(--bg-panel);
+  color: var(--text);
   font-size: 16px;
 }
 .round-btn:hover {
   border-color: var(--accent);
-  color: var(--accent);
+  color: var(--link-hover);
 }
 
 .search-pill {
   text-decoration: none;
-  background: #fff;
-  border: 1px solid #dce9f7;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
 }
 .search-pill:hover {
   border-color: var(--accent);
@@ -291,11 +298,11 @@ input:focus-visible,
   font-size: 14.5px;
   padding: 11px 20px;
   border-radius: 999px;
-  background: #12212f;
+  background: var(--accent-gradient);
   color: #fff;
 }
 .dark-pill:hover {
-  background: #22394d;
+  filter: brightness(1.12);
 }
 .outline-pill {
   text-decoration: none;
@@ -303,15 +310,15 @@ input:focus-visible,
   padding: 11px 20px;
   border-radius: 999px;
   border: 1px solid var(--border-strong);
-  color: #22394d;
-  background: rgba(255, 255, 255, 0.75);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
 }
 .outline-pill:hover {
   border-color: var(--accent);
 }
 
 .fab-whatsapp:hover {
-  background: var(--accent-2);
+  filter: brightness(1.1);
 }
 
 @media (max-width: 1120px) {

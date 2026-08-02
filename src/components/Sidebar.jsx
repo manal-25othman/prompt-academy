@@ -11,38 +11,16 @@ export default function Sidebar({ active, copiedKey, copy }) {
         position: 'sticky',
         top: 0,
         height: '100vh',
-        borderInlineStart: '1px solid #C6D9EC',
-        background: '#DCE9F7',
+        borderInlineStart: '1px solid var(--border)',
+        background: 'var(--sidebar-bg)',
         display: 'flex',
         flexDirection: 'column',
         overflow: 'hidden',
       }}
     >
-      <div style={{ padding: '20px 20px 16px', borderBottom: '1px solid #C6D9EC' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <span
-            style={{
-              width: 9,
-              height: 9,
-              borderRadius: '50%',
-              background: '#0F766E',
-              animation: 'pulseDot 2.4s ease-in-out infinite',
-            }}
-          />
-          <span
-            style={{
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: 12,
-              letterSpacing: '0.16em',
-              color: '#647C90',
-              textTransform: 'uppercase',
-            }}
-          >
-            AI Studio
-          </span>
-        </div>
-        <div style={{ marginTop: 14, fontSize: 17, fontWeight: 600, color: '#12212F' }}>منال عثمان</div>
-        <div style={{ marginTop: 4, fontSize: 12.5, color: '#647C90', lineHeight: 1.7 }}>
+      <div style={{ padding: '20px 20px 16px', borderBottom: '1px solid var(--border)' }}>
+        <div style={{ fontSize: 17, fontWeight: 600, color: 'var(--text-strong)' }}>منال عثمان</div>
+        <div style={{ marginTop: 4, fontSize: 12.5, color: 'var(--muted)', lineHeight: 1.7 }}>
           مهندسة ذكاء اصطناعي توليدي
         </div>
       </div>
@@ -53,7 +31,7 @@ export default function Sidebar({ active, copiedKey, copy }) {
             fontFamily: "'JetBrains Mono', monospace",
             fontSize: 10.5,
             letterSpacing: '0.18em',
-            color: '#7C93A8',
+            color: 'var(--muted)',
             padding: '8px 10px 10px',
             textTransform: 'uppercase',
           }}
@@ -68,7 +46,7 @@ export default function Sidebar({ active, copiedKey, copy }) {
         ))}
       </nav>
 
-      <div style={{ borderTop: '1px solid #C6D9EC', padding: '14px 16px', display: 'grid', gap: 8 }}>
+      <div style={{ borderTop: '1px solid var(--border)', padding: '14px 16px', display: 'grid', gap: 8 }}>
         <a href={WA_LINKS.general} target="_blank" rel="noopener noreferrer" className="wa-btn">
           تواصل عبر واتساب
         </a>
