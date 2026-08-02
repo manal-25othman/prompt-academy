@@ -79,7 +79,17 @@ export const SECTIONS = [
   { id: 'techniques', label: 'التقنيات', num: '05' },
   { id: 'examples', label: 'أمثلة قبل / بعد', num: '06' },
   { id: 'library', label: 'مكتبة البرومتات', num: '07' },
-  { id: 'about', label: 'عن منال ووسائل التواصل', num: '08' },
+  { id: 'resources', label: 'أدوات ومواقع مفيدة', num: '08' },
+  { id: 'channel', label: 'قناة الواتساب', num: '09' },
+  { id: 'about', label: 'طرق التواصل', num: '10' },
+];
+
+export const RESOURCES = [
+  { name: 'ChatGPT / Claude.ai', url: 'https://claude.ai', desc: 'محادثة مباشرة مع نموذج ذكاء اصطناعي — تقدر تطلب منه يصيغ لك برومت جاهز بالوصف اللي تبيه.' },
+  { name: 'PromptHero', url: 'https://prompthero.com', desc: 'مكتبة ضخمة من البرومتات الجاهزة، خصوصًا لتوليد الصور، مع إمكانية البحث والتصفية حسب النمط.' },
+  { name: 'FlowGPT', url: 'https://flowgpt.com', desc: 'مجتمع لمشاركة واكتشاف برومتات لمختلف الأغراض من مستخدمين حول العالم.' },
+  { name: 'PromptBase', url: 'https://promptbase.com', desc: 'سوق لبيع وشراء برومتات احترافية مُختبرة لمهام محددة.' },
+  { name: 'GeneratePrompt.ai', url: 'https://generateprompt.ai/en', desc: 'أداة تولّد لك برومت جاهز ومنظم تلقائيًا بناءً على وصف بسيط لمهمتك.' },
 ];
 
 export const JOURNEY = [
@@ -93,6 +103,7 @@ export const JOURNEY = [
 export const WHATSAPP_NUMBER = '966596280672';
 export const WHATSAPP_DISPLAY = '+966 59 628 0672';
 export const BOOK_URL = 'https://web.mrrha.app/app/products/detail/647986?n=%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%D8%A7%D9%84%D9%85%D9%81%D8%AA%D8%A7%D8%AD%20%D8%A5%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D9%82%D8%A8%D9%84';
+export const CHANNEL_URL = 'https://whatsapp.com/channel/0029VbD55lLBKfi1WKB1j51l';
 
 const waLink = (text) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 
