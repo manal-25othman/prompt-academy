@@ -2,7 +2,7 @@ const STATS = [
   { value: '08', label: 'وحدات تعليمية' },
   { value: '04', label: 'مكوّنات لبرومت محترف' },
   { value: '06', label: 'تقنيات مجرّبة' },
-  { value: '12', label: 'قالب جاهز للنسخ' },
+  { value: '40', label: 'قالب جاهز للنسخ' },
 ];
 
 export default function StatsRow() {

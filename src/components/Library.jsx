@@ -12,7 +12,7 @@ export default function Library({ copiedKey, copy }) {
         قوالب جاهزة — انسخ وعدّل ما بين الأقواس
       </h2>
       <p className="muted" style={{ fontSize: 16, lineHeight: 1.9, color: '#5B7386', maxWidth: '62ch', margin: '0 0 24px' }}>
-        ستة قوالب مختارة تغطي التعليم والتسويق والبرمجة والتصميم.
+        ٤٠ قالبًا جاهزًا — عشرة لكل مجال: التعليم، التسويق، البرمجة، والتصميم.
       </p>
       <div className="no-print" style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 18 }}>
         {CATS.map((c) => (
