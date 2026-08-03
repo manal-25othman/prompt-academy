@@ -9,15 +9,20 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'الخدمة غير مفعّلة بعد، حاول لاحقًا أو تواصل عبر واتساب.' });
   }
 
-  const { name, contact, message } = req.body || {};
+  const { name, email, phone, message } = req.body || {};
 
-  if (typeof name !== 'string' || !name.trim() || typeof contact !== 'string' || !contact.trim()) {
-    return res.status(400).json({ error: 'الاسم ووسيلة التواصل مطلوبة.' });
+  if (
+    typeof name !== 'string' || !name.trim() ||
+    typeof email !== 'string' || !email.trim() ||
+    typeof phone !== 'string' || !phone.trim()
+  ) {
+    return res.status(400).json({ error: 'الاسم والبريد الإلكتروني ورقم الواتساب مطلوبة.' });
   }
 
   const payload = {
     name: name.trim().slice(0, 200),
-    contact: contact.trim().slice(0, 200),
+    email: email.trim().slice(0, 200),
+    phone: phone.trim().slice(0, 50),
     message: typeof message === 'string' ? message.trim().slice(0, 1000) : '',
     date: new Date().toISOString(),
   };
