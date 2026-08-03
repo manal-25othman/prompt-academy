@@ -12,6 +12,9 @@ import Examples from './components/Examples';
 import Library from './components/Library';
 import Resources from './components/Resources';
 import Channel from './components/Channel';
+import Tips from './components/Tips';
+import Faq from './components/Faq';
+import Interest from './components/Interest';
 import About from './components/About';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
@@ -51,6 +54,9 @@ function App() {
           <Library copiedKey={copiedKey} copy={copy} />
           <Resources />
           <Channel />
+          <Tips />
+          <Faq />
+          <Interest />
           <About copiedKey={copiedKey} copy={copy} />
           <Footer />
         </div>

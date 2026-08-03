@@ -4,8 +4,8 @@ export default function About({ copiedKey, copy }) {
   const label = copiedKey === 'num' ? 'تم نسخ الرقم ✓' : copiedKey === 'fail:num' ? 'حدّده وانسخه يدويًا' : 'انسخ رقم الواتساب';
 
   return (
-    <section id="about" data-screen-label="10 طرق التواصل" style={{ padding: '48px 0 0', borderTop: '1px solid var(--border-soft)' }}>
-      <div className="eyebrow">10 — CONTACT</div>
+    <section id="about" data-screen-label="13 طرق التواصل" style={{ padding: '48px 0 0', borderTop: '1px solid var(--border-soft)' }}>
+      <div className="eyebrow">13 — CONTACT</div>
       <div className="col2" style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 28, alignItems: 'start' }}>
         <div className="panel" style={{ padding: 30 }}>
           <h2 className="h2" style={{ fontSize: 30, marginBottom: 6 }}>
