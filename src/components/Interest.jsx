@@ -2,14 +2,17 @@ import { useState } from 'react';
 
 export default function Interest() {
   const [name, setName] = useState('');
-  const [contact, setContact] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState(null);
 
+  const ready = name.trim() && email.trim() && phone.trim();
+
   async function onSubmit(e) {
     e.preventDefault();
-    if (!name.trim() || !contact.trim() || status === 'sending') return;
+    if (!ready || status === 'sending') return;
 
     setStatus('sending');
     setError(null);
@@ -18,7 +21,7 @@ export default function Interest() {
       const res = await fetch('/api/interest', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, contact, message }),
+        body: JSON.stringify({ name, email, phone, message }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'تعذّر إرسال الطلب');
@@ -51,12 +54,12 @@ export default function Interest() {
           مهتم بالدورات القادمة؟
         </h2>
         <p className="muted" style={{ fontSize: 15.5, lineHeight: 1.9, color: 'var(--muted)', margin: '0 0 22px' }}>
-          سجّل بياناتك بالأسفل، وسيصلك إشعار مباشر أول ما يُفتح التسجيل في دورة كتابة البرومبت.
+          سجّل بياناتك بالأسفل، وراح يوصلك تأكيد فوري على إيميلك، وتواصل مباشر أول ما يُفتح التسجيل في دورة كتابة البرومبت.
         </p>
 
         {status === 'sent' ? (
           <div style={{ fontSize: 14.5, color: 'var(--text-strong)', background: 'var(--bg-panel-alt)', border: '1px solid var(--border)', borderRadius: 8, padding: '14px 16px' }}>
-            تم تسجيل اهتمامك ✓ — راح يوصلك تواصل أول ما تكون الدورة متاحة.
+            تم تسجيل اهتمامك ✓ — تحقق من بريدك الإلكتروني لرسالة التأكيد.
           </div>
         ) : (
           <form onSubmit={onSubmit} style={{ display: 'grid', gap: 12 }}>
@@ -69,12 +72,20 @@ export default function Interest() {
               style={inputStyle}
             />
             <input
-              type="text"
-              value={contact}
-              onChange={(e) => setContact(e.target.value)}
-              placeholder="رقم واتساب أو بريد إلكتروني"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="البريد الإلكتروني"
               required
               style={inputStyle}
+            />
+            <input
+              type="tel"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              placeholder="رقم الواتساب"
+              required
+              style={{ ...inputStyle, direction: 'ltr', textAlign: 'end' }}
             />
             <textarea
               value={message}
@@ -86,7 +97,7 @@ export default function Interest() {
             <button
               type="submit"
               className="wa-btn-solid"
-              disabled={status === 'sending' || !name.trim() || !contact.trim()}
+              disabled={status === 'sending' || !ready}
               style={{
                 border: 'none',
                 cursor: status === 'sending' ? 'not-allowed' : 'pointer',
