@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import Sidebar from './components/Sidebar';
 import TopNav from './components/TopNav';
 import Hero from './components/Hero';
@@ -64,6 +65,7 @@ function App() {
 
       <FloatingWhatsApp />
       <Chatbot />
+      <Analytics />
     </div>
   );
 }
